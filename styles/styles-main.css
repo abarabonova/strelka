@@ -1,6 +1,9 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro&display=swap');
 
+:root{
+  --main-blue: #006AFF;
+}
 body{
 font-family: 'Anonymous Pro', monospace;
 }
@@ -20,7 +23,8 @@ cекция hero
   background-size: cover;
   background-position: center;
   height: 85vh;
-  text-align:center;
+  text-align: center;
+  position: relative;
 }
 
 .hero nav {
@@ -38,4 +42,101 @@ cекция hero
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 14px;
+}
+
+.hero nav ul li:last-child{
+  padding-left: 30px;
+}
+.hero h1{
+  color: #fff;
+  font-size: 110px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  letter-spacing: 1px;
+}
+
+.hero .btn{
+  background: var(--main-blue);
+  padding: 10px;
+  position: absolute;
+  margin: 10px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+
+/*секция edu
+*/
+
+.edu{
+  height: 85vh;
+  display: flex;
+
+}
+.post,
+.research{
+  height: 100%;
+  background-size: cover;
+  width: 50%;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post{
+  background-image: url(../img/post.jpg);
+}
+
+.research{
+  background-image: url(../img/research.jpg);
+}
+
+.post a{
+  background-color: #fff;
+  color: red;
+  padding: 50px 25px;
+  font-size: 40px;
+
+}
+
+
+.research a{
+  background-color: red;
+  color: #fff;
+  padding: 50px 25px;
+  font-size: 40px;
+
+}
+.post span{
+  display: block;
+}
+
+/* секция книги*/
+.books{
+  background-color: var(--main-blue);
+}
+
+.books ul {
+  display: flex;
+  overflow-x: scroll;
+  padding: 10px;
+}
+
+.books ul li img {
+  width: 300px;
+  display: flex;
+  margin: 0 10px;
+  transition: transform 300ms ease;
+}
+
+.books ul li img:hover{
+  cursor: pointer;
+  transform: scale(1.05);
 }
